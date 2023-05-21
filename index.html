@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Riley fixit!</title>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <style>
+  .underline {
+    text-decoration: underline;
+  }
+    
+  .top-bar {
+    background-color: red;
+    height: 30px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+  }
+  .top-bar p {
+    color: black;
+    font-size: 16px;
+    margin: 0;
+    padding: 0 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-shadow: 
+      -1px -1px 0 white, /* Top-left */
+      1px -1px 0 white,  /* Top-right */
+      -1px 1px 0 white,  /* Bottom-left */
+      1px 1px 0 white;   /* Bottom-right */
+  }
+    
+   .text-outline {
+     text-shadow: 
+      -1px -1px 0 blue, /* Top-left */
+      1px -1px 0 blue,  /* Top-right */
+      -1px 1px 0 blue,  /* Bottom-left */
+      1px 1px 0 blue;   /* Bottom-right */
+   }
+
+   .bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+   }
+
+    body {
+      background-color: #3d3d3d;
+      margin: 0;
+      padding: 0;
+      font-family: Arial Black;
+    }
+    
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: colorFade 2s infinite;
+}
+
+@keyframes colorFade {
+  0% {
+    background-color: #0000ff;
+  }
+  25% {
+    background-color: #1e1eff;
+  }
+  50% {
+    background-color: #3a3aff;
+  }
+  75% {
+    background-color: #5454ff;
+  }
+  100% {
+    background-color: #6a6aff;
+  }
+}
+    .content {
+      background-color: #3d3d3d;
+      margin-left: 10px;
+      padding: 20px;
+    }
+    
+    .button {
+      outline: none;
+      font-family: Arial Black;
+      display: block;
+      background-color: #00103b;
+      color: blue;
+      border: none;
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    
+    .button:hover {
+      background-color: #445ba0;
+    }
+    
+.oth_sidebar {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  animation: colorFade 2s infinite;
+}
+    .hidden {
+      display:none
+    }
+  </style>
+  <script>
+    function show() {
+        var img = document.getElementById("ct");
+        img.classList.remove("hidden");
+    }
+    function changeText(text, title, mor) {
+      var whiteField = document.getElementById('white-field');
+      whiteField.textContent = text;
+      var tiTle = document.getElementById('title');
+      tiTle.textContent = title;
+      var morr = document.getElementById('morein');
+      morr.textContent = mor;
+    }
+  </script>
+</head>
+<body>
+  <div class="top-bar">
+    <center>
+     <p><marquee>RILEY CAN FIX IT! THE NUMBER 1 RATED TECH SUPPORT SERVICE ACCORDING TO ME. PLEASE CONTACT <a onclick="changeText('So far, we have no contact info', 'Contact', 'Sorry.')"><span class="underline"> HERE</span></a></marquee></p>
+    </center>
+  </div>
+  <div class="sidebar">
+    <center>
+      <br>
+     <h3>Pages</h3>
+     <br>
+     <button class="button" onclick="changeText('Riley can fix it!, Click the sidebar for more info!', 'Riley can fix it!', '')">Home</button>
+     <button class="button" onclick="changeText('Riley can fix anything! Except divorces. Riley can fix computers, phones, TVs and more!', 'Services', 'Currently, we only offer services to friends of riley.')">Services</button>
+      <button class="button" onclick="changeText('So far, we have no contact info', 'Contact', 'Sorry.')">Contact</button>
+      <button class="button" onclick="changeText('I can fix TVs, Computers, Tablets, Phones, Projectors, Chromebooks', 'What i can fix', 'And other electronics!')">What i can fix</button>
+     <div class="bottom">
+      <h3> Have a computer problem? <ion-icon size="large" name="desktop-outline"></ion-icon></h3>
+      <h3> Riley can fix it! <ion-icon size="large" name="hammer-outline"></ion-icon></h3>
+      <h3>Guaranteed quick time! <ion-icon size="large" name="alarm-outline"></ion-icon></h3> 
+     </div>
+    </center>
+  </div>
+  <div class="oth_sidebar">
+    <center>
+      <br>
+     <h2>About</h2>
+     <h3>Riley Fixit! Is a computer support company!</h3>
+      <h3>We only offer services to friends of riley.</h3>
+      <h3>For more info, Click the buttons on the left.</h3>
+      <h3> Based in connecticut. <img src="https://th.bing.com/th/id/R.b32e43d6b3f73a1648ccd6d76fb40fe0?rik=z6TzWdRR9WnUFQ&pid=ImgRaw&r=0" id="ct" width="30" height="30"></h3>
+    </center>
+  </div>
+  <div class="content">
+    <div align="center">
+     <h1 id="title" class="text-outline">Riley can fix it!</h1>
+     <br>
+     <h3 id="white-field" class="text-outline">Riley can fix it!, Click the sidebar for more info!</h3>
+     <br>
+     <h3 id="morein" class="text-outline"></h3>
+    </div>
+  </div>
+</body>
+</html>
