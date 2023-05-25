@@ -5,6 +5,18 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <style>
+  .highlight-text {
+    display: inline-block;
+    padding: 2px 5px;
+    background-color: #363636;
+    border-radius: 4px;
+    text-shadow: 
+     -1px -1px 0 blue, /* Top-left */
+      1px -1px 0 blue,  /* Top-right */
+     -1px 1px 0 blue,  /* Bottom-left */
+      1px 1px 0 blue;   /* Bottom-right */
+  }
+    
   .underline {
     text-decoration: underline;
   }
@@ -115,10 +127,6 @@
     }
   </style>
   <script>
-    function show() {
-        var img = document.getElementById("ct");
-        img.classList.remove("hidden");
-    }
     function changeText(text, title, mor) {
       var whiteField = document.getElementById('white-field');
       whiteField.textContent = text;
@@ -144,10 +152,11 @@
      <button class="button" onclick="changeText('Riley can fix anything! Except divorces. Riley can fix computers, phones, TVs and more!', 'Services', 'Currently, we only offer services to friends of riley.')">Services</button>
       <button class="button" onclick="changeText('So far, we have no contact info', 'Contact', 'Sorry.')">Contact</button>
       <button class="button" onclick="changeText('I can fix TVs, Computers, Tablets, Phones, Projectors, Chromebooks', 'What i can fix', 'And other electronics!')">What i can fix</button>
+      <h4>Projects/Other sites</h4>
+      <button class="button" onclick="window.location.href='https://retro-records.rileeyyy.repl.co'">Retro Records!</button>
      <div class="bottom">
       <h3> Have a computer problem? <ion-icon size="large" name="desktop-outline"></ion-icon></h3>
       <h3> Riley can fix it! <ion-icon size="large" name="hammer-outline"></ion-icon></h3>
-      <h3>Guaranteed quick time! <ion-icon size="large" name="alarm-outline"></ion-icon></h3> 
      </div>
     </center>
   </div>
@@ -163,11 +172,11 @@
   </div>
   <div class="content">
     <div align="center">
-     <h1 id="title" class="text-outline">Riley can fix it!</h1>
+     <h1 id="title" class="highlight-text">Riley can fix it!</h1>
      <br>
-     <h3 id="white-field" class="text-outline">Riley can fix it!, Click the sidebar for more info!</h3>
+     <h3 id="white-field" class="highlight-text">Riley can fix it!, Click the sidebar for more info!</h3>
      <br>
-     <h3 id="morein" class="text-outline"></h3>
+     <h3 id="morein" class="highlight-text"></h3>
     </div>
   </div>
 </body>
