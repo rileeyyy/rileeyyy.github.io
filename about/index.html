@@ -1,74 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>hi im riley</title>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <style>
-  .highlight-text {
-    display: inline-block;
-    padding: 2px 5px;
-    background-color: #363636;
-    border-radius: 4px;
-    text-shadow: 
-     -1px -1px 0 blue, /* Top-left */
-      1px -1px 0 blue,  /* Top-right */
-     -1px 1px 0 blue,  /* Bottom-left */
-      1px 1px 0 blue;   /* Bottom-right */
-  }
-    
-  .underline {
-    text-decoration: underline;
-  }
-    
-    
-   .text-outline {
-     text-shadow: 
-      -1px -1px 0 blue, /* Top-left */
-      1px -1px 0 blue,  /* Top-right */
-      -1px 1px 0 blue,  /* Bottom-left */
-      1px 1px 0 blue;   /* Bottom-right */
-   }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-    body {
-      background-color: #3d3d3d;
-      margin: 0;
-      padding: 0;
-      font-family: Arial Black;
-    }
-    
-    .content {
-      background-color: #3d3d3d;
-      margin-left: 10px;
-      padding: 20px;
-    }
-    
-    
-    .hidden {
-      display:none
-    }
-  </style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #4a00e0, #8e2de2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
 </head>
-<body>
-  <div class="content">
-    <div align="center">
-     <h1 id="title" class="highlight-text">hi, im riley</h1>
-     <br>
-     <h3 class="highlight-text">i make websites, but heres more info</h3>
-     <br>
-     <h3 class="highlight-text">im riley</h3>
-      <h3 class="highlight-text"> i love computers, music, and old stuff in general</h3>
-      <h3 class="highlight-text">i started coding around 2021 and look at me now!</h3>
-      <h3 class="highlight-text">languages i know are: HTML, CSS, JS, PHP, Windows Batch, VBS,  Windows Powershell, Python, C, C++, BASIC, Assembly x86, and Java</h3>
-      <h4 class="highlight-text">although i mostly code in HTML, CSS, JS, C, Python, and Java</h4>
-      <h3 class="highlight-text">thats alot! wow!</h3>
-      <h3 class="highlight-text">though the languages i mostly code in/use are: HTML, CSS, JS, Python, C, and Java</h3>
-      <h3 class="highlight-text">languages i speak are english and (some) spanish!</h3>
-      <br>
-      <h3 class="highlight-text"> but yeah, thats.. pretty much it</h3>
-      <br>
-      <h3 class="highlight-text"><a href="https://rileeyyy.github.io">back</a></h3>
-    </div>
-  </div>
+<body class="bg-gray-800 text-gray-200 min-h-screen flex flex-col">
+    <header class="bg-gray-900 shadow-lg">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold gradient-text">riley</a>
+                <div class="space-x-6">
+                    <a href="/" class="hover:text-blue-400 transition duration-300">home</a>
+                    <a href="/projects" class="hover:text-blue-400 transition duration-300">projects</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-6 py-8">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl font-bold mb-6 gradient-text text-center">about me</h1>
+            <div class="space-y-4 text-lg">
+                <p>hi, im riley. i make websites, but here's more info:</p>
+                <p>i love computers, music, and old stuff in general</p>
+                <p>i started coding around 2021 and look at me now!</p>
+                <p>languages i know are: HTML, CSS, JS, PHP, Windows Batch, VBS, Windows Powershell, Python, C, C++, BASIC, Assembly x86, and Java</p>
+                <p class="text-sm italic">although i mostly code in HTML, CSS, JS, C, Python, and Java</p>
+                <p>that's a lot! wow!</p>
+                <p>languages i speak are english and (some) spanish!</p>
+                <p>but yeah, that's... pretty much it</p>
+            </div>
+            <div class="mt-8 text-center">
+                <a href="/" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">back to home</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 py-4 text-center">
+        <p>&copy; 2024 riley. all rights reserved.</p>
+    </footer>
 </body>
 </html>
